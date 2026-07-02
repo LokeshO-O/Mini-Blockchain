@@ -1,11 +1,14 @@
-from block import Block
+from blockchain import Blockchain
 
-block = Block(
-    1,
-    "Lokesh pays Mansi ₹100",
-    "0000"
-)
+my_chain = Blockchain()
 
-print("Index:", block.index)
-print("Payload:", block.payload)
-print("Hash:", block.hash)
+my_chain.add_block("Lokesh pays Mansi ₹100")
+my_chain.add_block("Mansi pays DecodeLabs ₹50")
+my_chain.add_block("DecodeLabs rewards Lokesh ₹25")
+
+for block in my_chain.chain:
+    print("---------------------------")
+    print("Index:", block.index)
+    print("Payload:", block.payload)
+    print("Previous Hash:", block.previous_hash)
+    print("Hash:", block.hash)
