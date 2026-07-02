@@ -6,8 +6,6 @@ block = Block(
     "0000"
 )
 
-print(block.index)
-print(block.timestamp)
-print(block.payload)
-print(block.previous_hash)
-print(block.nonce)
+print("Index:", block.index)
+print("Payload:", block.payload)
+print("Hash:", block.hash)

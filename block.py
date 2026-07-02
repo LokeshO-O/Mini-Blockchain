@@ -1,5 +1,7 @@
 from datetime import datetime
 import hashlib
+
+
 class Block:
 
     def __init__(self, index, payload, previous_hash):
@@ -8,3 +10,17 @@ class Block:
         self.payload = payload
         self.previous_hash = previous_hash
         self.nonce = 0
+
+        # Automatically calculate the hash when the block is created
+        self.hash = self.calculate_hash()
+
+    def calculate_hash(self):
+        data = (
+                str(self.index)
+                + self.timestamp
+                + self.payload
+                + self.previous_hash
+                + str(self.nonce)
+              )
+
+        return hashlib.sha256(data.encode()).hexdigest()
