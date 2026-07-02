@@ -24,3 +24,9 @@ class Block:
               )
 
         return hashlib.sha256(data.encode()).hexdigest()
+    
+    def mine_block(self, difficulty):
+        target = "0" * difficulty
+        while not self.hash.startswith(target):
+          self.nonce += 1
+          self.hash = self.calculate_hash()
