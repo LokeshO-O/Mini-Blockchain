@@ -1,7 +1,5 @@
 # ⛓️ Mini Blockchain
 
-A simple blockchain implementation in Python built as part of the DecodeLabs Blockchain Learning Internship.
-
 This project demonstrates the fundamental concepts behind blockchain technology, including cryptographic hashing, block linking, Proof of Work (mining), and blockchain validation.
 
 ---
