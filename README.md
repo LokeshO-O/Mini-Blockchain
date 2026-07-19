@@ -40,25 +40,6 @@ The blockchain consists of:
 
 ---
 
-## 📂 Project Structure
-
-```
-Mini-Blockchain/
-│
-├── block.py
-├── blockchain.py
-├── main.py
-├── README.md
-├── requirements.txt
-├── .gitignore
-│
-├── docs/
-│
-└── screenshots/
-```
-
----
-
 ## ⚙️ How It Works
 
 ### Step 1
